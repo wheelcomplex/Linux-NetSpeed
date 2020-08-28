@@ -209,12 +209,7 @@ startlotserver(){
 		apt-get update
 		apt-get install ethtool
 	fi
-	bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/chiakge/lotServer/master/Install.sh) install
-	sed -i '/advinacc/d' /appex/etc/config
-	sed -i '/maxmode/d' /appex/etc/config
-	echo -e "advinacc=\"1\"
-maxmode=\"1\"">>/appex/etc/config
-	/appex/bin/lotServer.sh restart
+	bash <(wget --no-check-certificate -qO- https://github.com/MoeClub/lotServer/raw/master/Install.sh) install
 	start_menu
 }
 
